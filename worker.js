@@ -1,5 +1,5 @@
 $(function() {
-  self.onmessage = function (event) {
+  onmessage = function (event) {
     let excelBinaryData = event.data;
     let getExcelList = [];
     let appliedBrand = {
@@ -80,6 +80,7 @@ $(function() {
 
       newExcelList[newExcelList.length] = newItem;
     }
-    this.postMessage(newExcelList);
+
+    postMessage(newExcelList);
   };
 })
