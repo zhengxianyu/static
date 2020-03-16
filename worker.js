@@ -1,4 +1,5 @@
-self.onmessage = function (event) {
+
+self.addEventListener('message', function (event) {
   let excelBinaryData = event.data;
   let getExcelList = [];
   let appliedBrand = {
@@ -80,4 +81,4 @@ self.onmessage = function (event) {
     newExcelList[newExcelList.length] = newItem;
   }
   this.postMessage(newExcelList);
-};
+}, false);
